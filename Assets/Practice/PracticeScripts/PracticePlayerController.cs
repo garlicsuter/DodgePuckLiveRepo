@@ -5,6 +5,9 @@ using UnityEngine;
 public class PracticePlayerController : MonoBehaviour
 {
     public float speed = 10;
+    public float xRange = 6.2f;
+    private float yRange = 4.4f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,5 +22,11 @@ public class PracticePlayerController : MonoBehaviour
         float moveVertical = Input.GetAxisRaw("Vertical");
 
         transform.Translate(new Vector2(moveHorizontal, moveVertical) * speed * Time.deltaTime);
+
+        //Keep player within Range (Left and Right sides)
+        if(transform.position.x > xRange)
+        {
+            transform.position = new Vector2(xRange, transform.position.y);
+        }
     }
 }
