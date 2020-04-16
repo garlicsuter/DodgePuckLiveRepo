@@ -21,10 +21,10 @@ public class PlayerController : MonoBehaviour
         //move Player
         float moveHorizontal = Input.GetAxisRaw("Horizontal");
         float moveVertical = Input.GetAxisRaw("Vertical");
-        print("the value of moveHorizontal: " + moveVertical);
+        //print("the value of moveHorizontal: " + moveVertical);
 
         Vector2 movement = new Vector2(moveHorizontal, moveVertical);
-        Debug.Log("movement: " + movement);
+        //Debug.Log("movement: " + movement);
 
         transform.Translate(movement * speed * Time.deltaTime);
 
