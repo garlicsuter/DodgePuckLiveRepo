@@ -19,7 +19,9 @@ public class PuckController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(moveDirection == 0)
+        // Check which moveDirection integer was chosen in the Start event,
+        // and move it the appropriate direction of up, down, left, or right.
+        if (moveDirection == 0)
         {
             transform.Translate(transform.up * Time.deltaTime * puckSpeed);
         }
