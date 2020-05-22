@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PracticePlayerController : MonoBehaviour
 {
@@ -52,5 +53,10 @@ public class PracticePlayerController : MonoBehaviour
         {
             transform.position = new Vector2(transform.position.x, -yRange);
         }
+    }
+
+    public void NewGame()
+    {
+        SceneManager.LoadScene(0);
     }
 }

@@ -46,7 +46,7 @@ public class PuckController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Wall"))
         {
-            print("Walllll");
+            //print("Walllll");
             puckSpeed = -puckSpeed;
         }
         
